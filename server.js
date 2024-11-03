@@ -13,6 +13,13 @@ import { fastify } from 'fastify'
 server.get('/', () => {
   return 'Hello World'
 })
+server.get('/hello', () => {
+  return 'Hello Yeah'
+})
+
+server.get('/node', () => {
+  return 'Hello Node.js'
+})
 
 const server = fastify()
 
