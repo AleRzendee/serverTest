@@ -1,20 +1,33 @@
 import { fastify } from 'fastify'
 export { DatabaseMemory } from './database-memory.js'
 
-server.post('/videos', () => {
-  return 'Hello World'
-})
-server.get('/videos', () => {
-  return 'Hello World'
-})
-server.put('/videos/', () => {
-  return 'Hello World'
-})
-server.delete('/videos/', () => {
-  return 'Hello World'
+const server = fastify()
+
+const database = new DatabaseMemory()
+
+server.post('/videos', (request, reply) => {
+  // return 'Hello World'
+  database.create({
+    title: 'First video',
+    description: 'This is my first video',
+    duration: 180.
+  })
+
+  console.log(database.list())
+
+  return reply.status(201).send()
+
 })
 
-const server = fastify()
+server.get('/videos', () => {
+
+})
+server.put('/videos/', () => {
+  
+})
+server.delete('/videos/', () => {
+  
+})
 
 server.listen({
   port: 3333,
