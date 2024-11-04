@@ -1,1 +1,1 @@
-POST https://localhost:3333/videos
+POST http://localhost:3333/videos
