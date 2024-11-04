@@ -10,7 +10,16 @@
 
 import { fastify } from 'fastify'
 
-server.get('/', () => {
+server.post('/videos', () => {
+  return 'Hello World'
+})
+server.get('/videos', () => {
+  return 'Hello World'
+})
+server.put('/videos/', () => {
+  return 'Hello World'
+})
+server.delete('/videos/', () => {
   return 'Hello World'
 })
 
