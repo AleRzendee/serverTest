@@ -1,14 +1,5 @@
-// import { createServer } from 'node:http'
-
-// const server = createServer((require, response) => {
-//   response.write('Hi')
-
-//   return response.end()
-// })
-
-// server.listen(3333)
-
 import { fastify } from 'fastify'
+export { DatabaseMemory } from './database-memory.js'
 
 server.post('/videos', () => {
   return 'Hello World'
